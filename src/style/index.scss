@@ -14,8 +14,10 @@ body {
   grid-template-columns: 2fr 5fr 2fr;
   align-items: center;
   height: 56px;
-  padding: 0 40px 0 10px;
+  padding: 0 40px 10px 10px;
   position: fixed;
+  background-color: white;
+  z-index: 9999;
   .navbar__left-container {
     display: flex;
     align-items: center;
@@ -448,9 +450,46 @@ body {
 .mainContent {
   display: grid;
   height: 100vh;
-  grid-template-columns: 200px 1fr;
-  position: absolute;
-  top: 56px;
-  left: 86px;
-  width: 92vw;
+  grid-template-columns: repeat(3, 1fr);
+  padding-top: 86px;
+  padding-left: 106px;
+  width: 91vw;
+
+  row-gap: 50px;
+  .video {
+    & > img {
+      width: 390px;
+      border-radius: 10px;
+      cursor: pointer;
+      &::after {
+        content: "32:30";
+        background-color: black;
+      }
+    }
+
+    .description {
+      display: flex;
+      padding-top: 10px;
+
+      img {
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+        margin-right: 15px;
+        cursor: pointer;
+      }
+      h2 {
+        font-size: 20px;
+        width: 90%;
+        margin-bottom: 3px;
+        cursor: pointer;
+      }
+      h4 {
+        font-size: 15px;
+        font-weight: 200;
+        padding: 3px 0;
+        cursor: pointer;
+      }
+    }
+  }
 }
