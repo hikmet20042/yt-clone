@@ -365,15 +365,87 @@ body {
 
 .detailed_sidebar {
   position: fixed;
-  top: 56px;
-  height: 85vh;
-  padding-top: 30px;
-  div {
+  background-color: white;
+  height: 100vh;
+  padding: 0 30px 0 10px;
+  overflow-x: scroll;
+  main div {
+    padding: 10px 50px 10px 10px;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    cursor: pointer;
+    img {
+      width: 26px !important;
+      height: 26px !important;
+      border-radius: 50%;
+    }
+    img,
+    svg {
+      height: 26px;
+      width: auto;
+
+      margin-right: 30px;
+    }
+
+    &:hover {
+      background-color: #6161611c;
+      border-radius: 10px;
+    }
+  }
+  .divider {
+    background: rgba(0, 0, 0, 0.1);
+    width: 225px;
+    height: 1px;
+    margin: 10px 0;
+  }
+  h3 {
+    font-weight: normal;
+    margin: 5px auto 5px 15px;
+  }
+  header {
+    display: fixed;
+    align-items: center;
     padding: 10px;
+    padding-top: 15px;
+    margin-bottom: 10px;
+    .header__hamburger {
+      margin-right: 40px;
+      display: inline-block;
+      svg {
+        height: 24px;
+        width: auto;
+
+        margin-left: 10px;
+
+        &:hover {
+          cursor: pointer;
+          background-color: #6161611c;
+          border-radius: 50%;
+        }
+      }
+    }
+    .header__logo {
+      display: inline-block;
+      &::after {
+        content: "AZ";
+        position: relative;
+        font-size: 11px;
+        top: -17px;
+        left: 2px;
+        color: #616161;
+      }
+      img {
+        height: 22px;
+        position: relative;
+        margin-left: -10px;
+      }
+    }
   }
 }
 
-main {
+body > main {
   display: grid;
   height: 100vh;
   grid-template-columns: 200px 1fr;

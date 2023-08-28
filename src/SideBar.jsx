@@ -4,8 +4,8 @@ import {
   MdOutlineVideoLibrary,
   MdOutlineSubscriptions,
 } from "react-icons/md";
-import { TfiDownload } from "react-icons/tfi";
-const SideBar = (sideBar, showSideBar) => {
+import { LiaDownloadSolid } from "react-icons/lia";
+const SideBar = () => {
   return (
     <div className="sidebar">
       <div className="sidebar_home">
@@ -25,7 +25,7 @@ const SideBar = (sideBar, showSideBar) => {
         <span>Library</span>
       </div>
       <div>
-        <TfiDownload />
+        <LiaDownloadSolid />
         <span>Downloads</span>
       </div>
     </div>
