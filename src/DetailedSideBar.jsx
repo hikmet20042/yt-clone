@@ -1,31 +1,37 @@
+/* eslint-disable react/prop-types */
 import {
   AiFillHome,
   AiOutlinePlaySquare,
   AiOutlineClockCircle,
-} from "react-icons/ai";
-import {
   MdSlowMotionVideo,
   MdOutlineVideoLibrary,
   MdOutlineSubscriptions,
   MdOutlinedFlag,
   MdOutlineFeedback,
-} from "react-icons/md";
-import { LiaDownloadSolid } from "react-icons/lia";
-import { RxHamburgerMenu } from "react-icons/rx";
-import { GoHistory, GoTrophy } from "react-icons/go";
-import { BiLike, BiHelpCircle } from "react-icons/bi";
-import { BsFire, BsMusicNote } from "react-icons/bs";
-import { SiYoutubegaming, SiYoutubestudio } from "react-icons/si";
-import { TbBrandYoutubeKids } from "react-icons/tb";
-import { FiSettings } from "react-icons/fi";
+  LiaDownloadSolid,
+  RxHamburgerMenu,
+  GoHistory,
+  GoTrophy,
+  BiLike,
+  BiHelpCircle,
+  BsFire,
+  BsMusicNote,
+  SiYoutubegaming,
+  SiYoutubestudio,
+  TbBrandYoutubeKids,
+  FiSettings,
+} from "./icons.js";
 import Logo from "./assets/logo.png";
 import Profile from "./assets/profile.jpg";
 
-const DetailedSideBar = () => {
+const DetailedSideBar = (props) => {
   return (
     <div className="detailed_sidebar">
       <header>
-        <div className="header__hamburger">
+        <div
+          className="header__hamburger"
+          onClick={() => props.showSideBar(!props.sideBar)}
+        >
           <RxHamburgerMenu />
         </div>
         <div className="header__logo">

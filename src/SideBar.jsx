@@ -1,10 +1,10 @@
-import { AiFillHome } from "react-icons/ai";
 import {
+  AiFillHome,
   MdSlowMotionVideo,
   MdOutlineVideoLibrary,
   MdOutlineSubscriptions,
-} from "react-icons/md";
-import { LiaDownloadSolid } from "react-icons/lia";
+  LiaDownloadSolid,
+} from "./icons.js";
 const SideBar = () => {
   return (
     <div className="sidebar">

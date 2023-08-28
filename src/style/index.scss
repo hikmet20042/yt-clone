@@ -445,7 +445,7 @@ body {
   }
 }
 
-body > main {
+.mainContent {
   display: grid;
   height: 100vh;
   grid-template-columns: 200px 1fr;

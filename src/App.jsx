@@ -1,16 +1,19 @@
 import { useState } from "react";
 import NavBar from "./NavBar";
-// import SideBar from "./SideBar";
-import DetailedSideBar from "./detailedSideBar";
+import SideBar from "./SideBar";
+import DetailedSideBar from "./DetailedSideBar";
+import MainContent from "./MainContent";
 
 function App() {
   const [sideBar, showSideBar] = useState(false);
   return (
     <>
       <NavBar sideBar={sideBar} showSideBar={showSideBar} />
-      {/* <SideBar /> */}
-      <DetailedSideBar />
-      <main></main>
+      <SideBar />
+      {sideBar && (
+        <DetailedSideBar sideBar={sideBar} showSideBar={showSideBar} />
+      )}
+      <MainContent />
     </>
   );
 }

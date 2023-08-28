@@ -1,18 +1,24 @@
+/* eslint-disable react/prop-types */
 import Logo from "./assets/logo.png";
 import Profile from "./assets/profile.jpg";
-import { RxHamburgerMenu } from "react-icons/rx";
-import { AiOutlineSearch } from "react-icons/ai";
-import { BiSolidMicrophone } from "react-icons/bi";
-import { RiVideoAddLine, RiVideoAddFill } from "react-icons/ri";
-import { IoMdNotificationsOutline, IoMdNotifications } from "react-icons/io";
-import { SlSettings } from "react-icons/sl";
-import { GoVideo, GoKebabHorizontal } from "react-icons/go";
-import { BsBroadcast } from "react-icons/bs";
-import { PiEyeSlashLight } from "react-icons/pi";
+import {
+  RxHamburgerMenu,
+  AiOutlineSearch,
+  BiSolidMicrophone,
+  RiVideoAddLine,
+  RiVideoAddFill,
+  IoMdNotificationsOutline,
+  IoMdNotifications,
+  SlSettings,
+  GoVideo,
+  GoKebabHorizontal,
+  BsBroadcast,
+  PiEyeSlashLight,
+} from "./icons.js";
 import { useState } from "react";
 import { useEffect } from "react";
 
-const NavBar = (sideBar, showSideBar) => {
+const NavBar = (props) => {
   const [focus, setFocus] = useState("");
   const [notificationCount, setNotificationCount] = useState(1);
 
@@ -63,7 +69,10 @@ const NavBar = (sideBar, showSideBar) => {
       <div className="navbar__left-container">
         <div
           className="navbar__left-container__hamburger"
-          onClick={() => showSideBar(!sideBar)}
+          onClick={() => {
+            props.showSideBar(!props.sideBar);
+            console.log(props.sideBar);
+          }}
         >
           <RxHamburgerMenu />
         </div>
