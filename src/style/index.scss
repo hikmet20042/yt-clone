@@ -8,6 +8,12 @@ body {
   width: 100%;
   height: 100%;
 }
+
+.fade {
+  height: 100vh;
+  width: 100vw;
+  z-index: 10;
+}
 .navbar {
   user-select: none;
   display: grid;
@@ -17,16 +23,18 @@ body {
   padding: 0 40px 10px 10px;
   position: fixed;
   background-color: white;
-  z-index: 9999;
+  z-index: 10;
+
   .navbar__left-container {
     display: flex;
     align-items: center;
     &__hamburger {
       padding: 15px;
       svg {
-        height: 24px;
-        width: auto;
+        height: 35px;
+        width: 35px;
         padding: 5px;
+        margin-left: 10px;
         &:hover {
           cursor: pointer;
           background-color: #6161611c;
@@ -35,6 +43,7 @@ body {
       }
     }
     &__logo {
+      margin-left: 10px;
       &::after {
         content: "AZ";
         position: relative;
@@ -126,7 +135,12 @@ body {
     display: flex;
     align-items: center;
     gap: 25px;
+    img {
+      width: 35px;
+      height: 35px;
 
+      border-radius: 50%;
+    }
     &_create {
       svg {
         font-size: 26px;
@@ -332,12 +346,78 @@ body {
       align-items: center;
       justify-content: center;
       img {
-        width: 35px;
-        height: 35px;
-
-        border-radius: 50%;
         &:active {
           border: 1px solid rgb(121, 170, 196);
+        }
+      }
+    }
+    &_profile-detailed {
+      background-color: white;
+      position: absolute;
+      top: 10px;
+      right: 80px;
+      width: 302px;
+      height: calc(100vh - 10px);
+      border-radius: 20px;
+      overflow-y: scroll;
+      .divider {
+        background: rgba(0, 0, 0, 0.1);
+        width: 100%;
+        height: 1px;
+        margin: 10px 0;
+      }
+      header {
+        display: flex;
+        .profile_icon {
+          padding: 10px;
+          img {
+            height: 45px;
+            width: 45px;
+          }
+        }
+        .profile_details {
+          padding: 10px;
+          font-size: 18px;
+          .full-name {
+            margin-bottom: 5px;
+          }
+          .username {
+            margin-bottom: 10px;
+          }
+          a {
+            font-size: 14px;
+            color: blue;
+            text-decoration: none;
+          }
+        }
+      }
+      section {
+        padding: 10px;
+        .setting {
+          display: flex;
+          align-items: center;
+          padding: 5px 0;
+          margin-bottom: 5px;
+          &:hover {
+            cursor: pointer;
+            background-color: #7c7c7c1c;
+          }
+          .icon {
+            padding: 0 15px 0 5px;
+            svg {
+              height: 1.5rem;
+              width: 1.5rem;
+            }
+          }
+          .property-name {
+            font-size: 15px;
+            padding-bottom: 5px;
+            margin-right: auto;
+          }
+          svg {
+            height: 1.25rem;
+            width: 1.25rem;
+          }
         }
       }
     }
@@ -369,10 +449,13 @@ body {
   position: fixed;
   background-color: white;
   height: 100vh;
-  padding: 0 30px 0 10px;
+  padding: 9px 30px 0 10px;
   overflow-x: scroll;
+  max-width: 300px;
+  top: 0;
+  z-index: 11;
   main div {
-    padding: 10px 50px 10px 10px;
+    padding: 10px 40px 10px 10px;
     margin: 0 10px;
     display: flex;
     align-items: center;
@@ -410,7 +493,7 @@ body {
     display: fixed;
     align-items: center;
     padding: 10px;
-    padding-top: 15px;
+    padding-top: 20px;
     margin-bottom: 10px;
     .header__hamburger {
       margin-right: 40px;
@@ -443,6 +526,23 @@ body {
         position: relative;
         margin-left: -10px;
       }
+    }
+  }
+  section {
+    padding: 10px 16px;
+    a {
+      display: inline-block;
+      margin-right: 10px;
+      font-size: 14px;
+      color: gray;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    p {
+      font-size: 13px;
+      color: gray;
+
+      text-decoration: none;
     }
   }
 }

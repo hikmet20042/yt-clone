@@ -79,7 +79,6 @@ const DetailedSideBar = (props) => {
           <span>Liked videos</span>
         </div>
         <p className="divider" />
-
         <h3>Subscriptions</h3>
         {/*         {data.map((item) => ( */}
         <div>
@@ -99,7 +98,6 @@ const DetailedSideBar = (props) => {
           <span>Abao in Tokyo</span>
         </div>
         <p className="divider" />
-
         <h3>Explore</h3>
         <div>
           <BsFire />
@@ -144,6 +142,26 @@ const DetailedSideBar = (props) => {
           <MdOutlineFeedback />
           <span>Send feedback</span>
         </div>
+        <p className="divider"></p>
+        <section className="additional-menu">
+          <a href="">About</a>
+          <a href="">Press</a>
+          <a href="">Copyright</a>
+          <a href="">Contact us</a>
+          <a href="">Creators</a>
+          <a href="">Advertise</a>
+          <a href="">Developers</a>
+          <br />
+          <br />
+          <a href="">Terms</a>
+          <a href="">Privacy</a>
+          <a href="">Policy & Safety</a>
+          <a href="">How YouTube works</a>
+          <a href="">Test new features</a>
+          <br />
+          <br />
+          <p>&copy; 2023 Google LLC</p>
+        </section>
       </main>
     </div>
   );

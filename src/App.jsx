@@ -9,6 +9,7 @@ function App() {
   return (
     <>
       <NavBar sideBar={sideBar} showSideBar={showSideBar} />
+
       <SideBar />
       {sideBar && (
         <DetailedSideBar sideBar={sideBar} showSideBar={showSideBar} />
